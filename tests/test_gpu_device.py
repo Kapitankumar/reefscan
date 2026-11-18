@@ -28,17 +28,21 @@ def test_ordinal_loss_buffers_follow_device():
 
 def test_trainer_criterion_lands_on_cuda(tmp_path):
     """End-to-end: Trainer.__init__ must place the criterion (incl. buffers) on CUDA."""
-    from src.classification.engine import TrainConfig, Trainer
-    from src.classification.models import build_model
+    from torch.utils.data import DataLoader, TensorDataset
 
-    cfg = TrainConfig(epochs=1, batch_size=2, image_size=64, strategy="feature_extraction")
-    model = build_model("resnet34", 2, pretrained=False, freeze_backbone=True).to("cuda")
+    from src.classification.engine import TrainConfig, Trainer
+
+    cfg = TrainConfig(epochs=1, strategy="feature_extraction", ordinal_loss=True)
+    ds = TensorDataset(torch.randn(8, 3, 64, 64), torch.randint(0, 2, (8,)))
+    loader = DataLoader(ds, batch_size=2)
     trainer = Trainer(
-        model,
-        model_name="resnet34",
-        class_names=["a", "b"],
-        cfg=cfg,
-        device=torch.device("cuda"),
+        "resnet34",
+        2,
+        loader,
+        None,
+        cfg,
+        ["a", "b"],
+        torch.device("cuda"),
         out_dir=tmp_path / "out",
     )
     assert trainer.criterion.positions.device.type == "cuda"
