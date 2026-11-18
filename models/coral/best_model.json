@@ -1,8 +1,56 @@
 {
   "task": "coral",
-  "best_model": "resnet34",
+  "best_model": "efficientnet_b0",
   "metric_for_best": "weighted_f1",
   "leaderboard": [
+    {
+      "model": "efficientnet_b0",
+      "strategy": "partial_finetune",
+      "params_m": 4.01,
+      "params_trainable_m": 1.24,
+      "train_seconds": 287.25251483917236,
+      "accuracy": 0.8990415335463259,
+      "top5_accuracy": 1.0,
+      "macro_ap": 0.9367721958214701,
+      "precision_macro": 0.8914256198347108,
+      "recall_macro": 0.8949384504737385,
+      "macro_f1": 0.893098504840333,
+      "weighted_f1": 0.8992670143102388,
+      "throughput_fps": 195.83099952470076,
+      "n_test": 1565
+    },
+    {
+      "model": "mobilenet_v3",
+      "strategy": "finetune",
+      "params_m": 1.52,
+      "params_trainable_m": 1.52,
+      "train_seconds": 229.71282243728638,
+      "accuracy": 0.8817891373801917,
+      "top5_accuracy": 1.0,
+      "macro_ap": 0.9444554037956888,
+      "precision_macro": 0.8727226954654281,
+      "recall_macro": 0.8780839908691982,
+      "macro_f1": 0.8751845664708735,
+      "weighted_f1": 0.882211096077176,
+      "throughput_fps": 218.5729921016255,
+      "n_test": 1565
+    },
+    {
+      "model": "convnext_tiny",
+      "strategy": "feature_extraction",
+      "params_m": 27.82,
+      "params_trainable_m": 0.0,
+      "train_seconds": 130.034841299057,
+      "accuracy": 0.8696485623003195,
+      "top5_accuracy": 1.0,
+      "macro_ap": 0.9133154396127505,
+      "precision_macro": 0.8633082417543637,
+      "recall_macro": 0.8576847441256076,
+      "macro_f1": 0.8602923157710485,
+      "weighted_f1": 0.8691403217481122,
+      "throughput_fps": 104.50058373091763,
+      "n_test": 1565
+    },
     {
       "model": "resnet34",
       "strategy": "feature_extraction",
@@ -11,12 +59,12 @@
       "train_seconds": 190.2860984802246,
       "accuracy": 0.8153354632587859,
       "top5_accuracy": 1.0,
-      "macro_ap": 0.8706413252630347,
+      "macro_ap": 0.870482229721992,
       "precision_macro": 0.8036828344439106,
       "recall_macro": 0.8030719172251812,
       "macro_f1": 0.8033739249439946,
       "weighted_f1": 0.8152424979350957,
-      "throughput_fps": 100.86469400889074,
+      "throughput_fps": 181.5356484450694,
       "n_test": 1565
     }
   ]

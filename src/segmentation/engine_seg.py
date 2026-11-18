@@ -114,6 +114,21 @@ class DeepFishSegmentationDataset(Dataset):
         return img_t, mask_t
 
 
+def _seed_worker(worker_id: int) -> None:
+    """Seed numpy/random per DataLoader worker from torch's per-worker seed.
+
+    Forked/spawned workers inherit the parent numpy RNG — without this, all
+    workers emit identical augmentation coin-flips. MUST stay module-level:
+    Windows spawn-based DataLoader workers pickle worker_init_fn, and nested
+    functions cannot be pickled (AttributeError: Can't get local object).
+    """
+    import random
+
+    seed = torch.initial_seed() % 2 ** 32
+    np.random.seed(seed)
+    random.seed(seed)
+
+
 def make_seg_loaders(data_dir: str | Path, image_size: int = 256, batch_size: int = 8,
                      val_fraction: float = 0.2, num_workers: int = 0) -> tuple[DataLoader, DataLoader | None]:
     """Build train/val loaders from a discovered pair set."""
@@ -133,15 +148,6 @@ def make_seg_loaders(data_dir: str | Path, image_size: int = 256, batch_size: in
             f"Not enough image/mask pairs under {data_dir} to form a training split "
             f"(found {len(pairs)} pair(s)). Download the full DeepFish segmentation set."
         )
-    def _seed_worker(worker_id: int) -> None:
-        """Forked workers inherit the parent numpy RNG — seed them from torch
-        so augmentation coin-flips differ per worker and stay reproducible."""
-        import random
-
-        seed = torch.initial_seed() % 2 ** 32
-        np.random.seed(seed)
-        random.seed(seed)
-
     train_loader = DataLoader(DeepFishSegmentationDataset(train_pairs, image_size, augment=True),
                               batch_size=batch_size, shuffle=True, num_workers=num_workers,
                               worker_init_fn=_seed_worker)
