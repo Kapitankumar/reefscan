@@ -5,13 +5,15 @@
 # I/O parallelism. Datasets download INSIDE the clone (datasets/) — the box has
 # no ephemeral-storage problem, unlike the cloud notebooks.
 #
-# If the card has ≥24 GB VRAM, batches can be raised with:
+# Profile tuned for a 6 GB VRAM laptop GPU (RTX 3050). For >=16 GB cards raise:
+#   --set coral.batch_size=64 --set fish.batch_size=64 --set seg.batch_size=16
+# For >=24 GB cards:
 #   --set coral.batch_size=128 --set fish.batch_size=128 --set seg.batch_size=32
 device:
   num_workers: 8
 fish:
-  batch_size: 64
-coral:
-  batch_size: 64
-seg:
   batch_size: 16
+coral:
+  batch_size: 16
+seg:
+  batch_size: 8

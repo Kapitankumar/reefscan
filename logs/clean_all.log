@@ -1,0 +1,19 @@
+2026-11-18 20:35:27,482 | INFO    | clean | Applied platform profile: gpu.yaml
+2026-11-18 20:35:27,487 | INFO    | clean | Cleaning coral dataset at X:\reefscan\datasets\coral\imagefolders (apply=True)
+2026-11-18 20:37:28,903 | INFO    | src.data.cleaning | Scan imagefolders: {'scanned': 10419, 'corrupt': 0, 'too_small': 0, 'duplicate_images': 0, 'leaked_images': 0}
+2026-11-18 20:37:28,914 | INFO    | src.data.cleaning | Quarantined 0 files under X:\reefscan\datasets\coral\imagefolders/_quarantine
+2026-11-18 20:37:28,925 | INFO    | clean | Report -> X:\reefscan\results\cleaning\coral_cleaning_report.json
+2026-11-18 20:37:28,925 | INFO    | clean | Counts: {"scanned": 10419, "corrupt": 0, "too_small": 0, "duplicate_images": 0, "leaked_images": 0, "quarantined": 0}
+2026-11-18 20:37:29,578 | INFO    | clean | Applied platform profile: gpu.yaml
+2026-11-18 20:37:29,578 | INFO    | clean | Cleaning f4k dataset at datasets\f4k\curated (apply=True)
+2026-11-18 20:41:01,366 | INFO    | src.data.cleaning | Scan curated: {'scanned': 26212, 'corrupt': 0, 'too_small': 0, 'duplicate_images': 0, 'leaked_images': 0}
+2026-11-18 20:41:01,388 | INFO    | src.data.cleaning | Quarantined 0 files under datasets\f4k\curated/_quarantine
+2026-11-18 20:41:01,426 | INFO    | clean | Report -> X:\reefscan\results\cleaning\f4k_cleaning_report.json
+2026-11-18 20:41:01,426 | INFO    | clean | Counts: {"scanned": 26212, "corrupt": 0, "too_small": 0, "duplicate_images": 0, "leaked_images": 0, "quarantined": 0}
+2026-11-18 20:41:02,119 | INFO    | clean | Applied platform profile: gpu.yaml
+2026-11-18 20:41:02,119 | INFO    | clean | Cleaning seg dataset at datasets\deepfish (apply=True)
+2026-11-18 20:41:04,892 | INFO    | seg.dataset | Discovered 611 image/mask pairs under datasets\deepfish
+2026-11-18 20:41:13,162 | INFO    | src.data.cleaning | Seg scan deepfish: {'pairs_found': 611, 'corrupt_images': 0, 'corrupt_masks': 0, 'empty_masks': 301, 'too_small_masks': 48, 'flagged_pairs': 349}
+2026-11-18 20:41:13,275 | INFO    | clean | Report -> X:\reefscan\results\cleaning\seg_cleaning_report.json
+2026-11-18 20:41:13,275 | INFO    | clean | Counts: {"pairs_found": 611, "corrupt_images": 0, "corrupt_masks": 0, "empty_masks": 301, "too_small_masks": 48, "flagged_pairs": 349, "quarantined": 349}
+ALL_CLEANING_DONE

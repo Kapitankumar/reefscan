@@ -181,7 +181,9 @@ def run_preflight(platform: str | None, task: str, with_pytest: bool, config_pat
         _dataset_check(checks, "DS_CORAL", Path(cfg.coral.data_dir), min_per_class=50)
     if "fish" in tasks:
         _dataset_check(checks, "DS_FISH", Path(cfg.fish.data_dir),
-                       min_per_class=int(cfg.fish.prepare.get("min_images_per_class", 100)))
+                       min_per_class=int(cfg.fish.prepare.get("min_images_per_class", 100)),
+                       max_imbalance_warn=float(cfg.fish.prepare.get("imbalance_warn", 10)),
+                       max_imbalance_fail=float(cfg.fish.prepare.get("imbalance_fail", 50)))
     if "seg" in tasks:
         from src.segmentation.engine_seg import discover_pairs
 

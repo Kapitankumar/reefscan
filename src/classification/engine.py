@@ -132,7 +132,7 @@ class Trainer:
             label_smoothing=cfg.label_smoothing,
             ordinal=cfg.ordinal_loss,
             ordinal_lam=cfg.ordinal_lam,
-        )
+        ).to(device)  # moves OrdinalLoss.position buffers to GPU (crashed on GPU-only runs)
         if cfg.strategy == "partial_finetune":
             groups = partial_finetune_groups(self.model, model_name, cfg.lr)
         else:

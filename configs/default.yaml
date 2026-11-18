@@ -71,6 +71,10 @@ fish:
     top_k: 13                # clusters with >= 100 images
     min_images_per_class: 100
     split_fractions: [0.8, 0.1, 0.1]   # seeded VIDEO-GROUP split (crops of one video share a split)
+    # F4K is naturally long-tailed (largest cluster ~70x smallest); the sampler +
+    # loss-weight mechanism handles this. Thresholds below only gate preflight:
+    imbalance_warn: 60       # warn above 60x train imbalance
+    imbalance_fail: 150      # FAIL above 150x (a collapsed/buggy class, not natural skew)
   image_size: 224
   batch_size: 32
   epochs: 15

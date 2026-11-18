@@ -1,0 +1,131 @@
+2026-11-18 20:44:42,662 | INFO    | src.utils.seed | Global seed set to 42.
+2026-11-18 20:44:42,664 | INFO    | src.utils.device | Using GPU: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+2026-11-18 20:44:42,686 | INFO    | train | Platform=gpu | device=NVIDIA GeForce RTX 3050 6GB Laptop GPU | git=0174fba
+2026-11-18 20:44:42,687 | INFO    | train | === Training coral / resnet34 (feature_extraction) ===
+2026-11-18 20:44:42,688 | INFO    | src.classification.datasets | Dataset: 2 classes from datasets\coral\imagefolders
+2026-11-18 20:44:42,763 | INFO    | train | Classes (2): ['CORAL', 'CORAL_BL']
+2026-11-18 20:44:42,881 | INFO    | train | Class balancing: sampler=on, loss weights=inverse_sqrt
+Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to C:\Users\kapit/.cache\torch\hub\checkpoints\resnet34-b627a593.pth
+  0%|          | 0.00/83.3M [00:00<?, ?B/s]  1%|          | 1.00M/83.3M [00:00<00:08, 10.0MB/s]  4%|▎         | 3.00M/83.3M [00:00<00:05, 16.1MB/s]  6%|▌         | 4.75M/83.3M [00:00<00:04, 17.1MB/s]  8%|▊         | 6.62M/83.3M [00:00<00:04, 17.5MB/s] 11%|█▏        | 9.50M/83.3M [00:00<00:03, 21.8MB/s] 15%|█▍        | 12.4M/83.3M [00:00<00:03, 24.4MB/s] 18%|█▊        | 14.8M/83.3M [00:00<00:02, 24.4MB/s] 21%|██        | 17.2M/83.3M [00:00<00:02, 24.8MB/s] 24%|██▎       | 19.8M/83.3M [00:00<00:02, 24.9MB/s] 27%|██▋       | 22.2M/83.3M [00:01<00:03, 18.0MB/s] 30%|██▉       | 24.9M/83.3M [00:01<00:03, 19.7MB/s] 32%|███▏      | 27.0M/83.3M [00:01<00:03, 17.8MB/s] 35%|███▌      | 29.2M/83.3M [00:01<00:03, 18.7MB/s] 38%|███▊      | 31.2M/83.3M [00:01<00:03, 17.7MB/s] 40%|███▉      | 33.1M/83.3M [00:01<00:03, 16.9MB/s] 42%|████▏     | 34.9M/83.3M [00:01<00:03, 16.3MB/s] 44%|████▍     | 36.5M/83.3M [00:02<00:03, 16.3MB/s] 46%|████▌     | 38.1M/83.3M [00:02<00:03, 15.1MB/s] 48%|████▊     | 39.6M/83.3M [00:02<00:03, 14.6MB/s] 50%|████▉     | 41.2M/83.3M [00:02<00:02, 15.1MB/s] 51%|█████▏    | 42.8M/83.3M [00:02<00:03, 13.6MB/s] 53%|█████▎    | 44.5M/83.3M [00:02<00:02, 14.0MB/s] 56%|█████▌    | 46.4M/83.3M [00:02<00:02, 14.8MB/s] 57%|█████▋    | 47.9M/83.3M [00:02<00:02, 14.9MB/s] 59%|█████▉    | 49.4M/83.3M [00:03<00:02, 14.0MB/s] 61%|██████    | 50.8M/83.3M [00:03<00:02, 13.6MB/s] 63%|██████▎   | 52.1M/83.3M [00:03<00:02, 13.1MB/s] 65%|██████▍   | 54.0M/83.3M [00:03<00:02, 13.2MB/s] 67%|██████▋   | 55.9M/83.3M [00:03<00:01, 14.7MB/s] 69%|██████▉   | 57.4M/83.3M [00:03<00:02, 12.6MB/s] 71%|███████   | 59.0M/83.3M [00:03<00:01, 12.8MB/s] 73%|███████▎  | 60.9M/83.3M [00:03<00:01, 14.2MB/s] 75%|███████▍  | 62.4M/83.3M [00:04<00:01, 14.0MB/s] 77%|███████▋  | 63.8M/83.3M [00:04<00:01, 14.1MB/s] 78%|███████▊  | 65.1M/83.3M [00:04<00:01, 13.4MB/s] 80%|███████▉  | 66.5M/83.3M [00:04<00:01, 12.9MB/s] 82%|████████▏ | 68.1M/83.3M [00:04<00:01, 13.7MB/s] 84%|████████▍ | 69.8M/83.3M [00:04<00:00, 14.3MB/s] 86%|████████▌ | 71.2M/83.3M [00:04<00:00, 14.1MB/s] 87%|████████▋ | 72.6M/83.3M [00:04<00:00, 14.2MB/s] 89%|████████▉ | 74.0M/83.3M [00:04<00:00, 13.7MB/s] 91%|█████████ | 75.5M/83.3M [00:05<00:00, 13.1MB/s] 93%|█████████▎| 77.4M/83.3M [00:05<00:00, 14.4MB/s] 95%|█████████▍| 78.9M/83.3M [00:05<00:00, 14.4MB/s] 97%|█████████▋| 80.4M/83.3M [00:05<00:00, 13.5MB/s] 98%|█████████▊| 81.8M/83.3M [00:05<00:00, 12.7MB/s]100%|█████████▉| 83.1M/83.3M [00:05<00:00, 12.4MB/s]100%|██████████| 83.3M/83.3M [00:05<00:00, 15.4MB/s]
+2026-11-18 20:44:49,396 | INFO    | src.classification.models | Built resnet34 (classes=2, trainable=0.00M / 21.29M params)
+2026-11-18 20:44:49,495 | INFO    | src.classification.engine | Strategy=feature_extraction | trainable 0.00M / 21.29M params
+train resnet34:   0%|          | 0/456 [00:00<?, ?it/s]                                                       2026-11-18 20:45:26,097 | ERROR   | train | Backbone resnet34 failed — continuing.
+Traceback (most recent call last):
+  File "X:\reefscan\train.py", line 287, in main
+    train_classifier(args.task, model_name, cfg, device, strategy_override=args.strategy)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\train.py", line 179, in train_classifier
+    history = trainer.fit()
+  File "X:\reefscan\src\classification\engine.py", line 204, in fit
+    train_loss, train_acc, grad_norm = self._train_epoch()
+                                       ~~~~~~~~~~~~~~~~~^^
+  File "X:\reefscan\src\classification\engine.py", line 257, in _train_epoch
+    loss = self.criterion(outputs, targets)
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\reefscan\src\classification\losses.py", line 37, in forward
+    dist = (self.positions.expand(logits.size(0), -1) - targets.view(-1, 1).float()).abs()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+2026-11-18 20:45:27,363 | INFO    | train | === Training coral / efficientnet_b0 (feature_extraction) ===
+2026-11-18 20:45:27,369 | INFO    | src.classification.datasets | Dataset: 2 classes from datasets\coral\imagefolders
+2026-11-18 20:45:27,537 | INFO    | train | Classes (2): ['CORAL', 'CORAL_BL']
+2026-11-18 20:45:27,539 | INFO    | train | Class balancing: sampler=on, loss weights=inverse_sqrt
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to C:\Users\kapit/.cache\torch\hub\checkpoints\efficientnet_b0_rwightman-7f5810bc.pth
+  0%|          | 0.00/20.5M [00:00<?, ?B/s]  7%|▋         | 1.38M/20.5M [00:00<00:01, 13.9MB/s] 23%|██▎       | 4.75M/20.5M [00:00<00:00, 26.3MB/s] 36%|███▌      | 7.38M/20.5M [00:00<00:00, 24.7MB/s] 54%|█████▍    | 11.1M/20.5M [00:00<00:00, 29.6MB/s] 71%|███████   | 14.5M/20.5M [00:00<00:00, 29.8MB/s] 85%|████████▍ | 17.4M/20.5M [00:00<00:00, 27.9MB/s] 98%|█████████▊| 20.1M/20.5M [00:00<00:00, 22.8MB/s]100%|██████████| 20.5M/20.5M [00:00<00:00, 25.0MB/s]
+2026-11-18 20:45:28,613 | INFO    | src.classification.models | Built efficientnet_b0 (classes=2, trainable=0.64M / 4.01M params)
+2026-11-18 20:45:28,650 | INFO    | src.classification.engine | Strategy=feature_extraction | trainable 0.64M / 4.01M params
+train efficientnet_b0:   0%|          | 0/456 [00:00<?, ?it/s]                                                              2026-11-18 20:46:05,034 | ERROR   | train | Backbone efficientnet_b0 failed — continuing.
+Traceback (most recent call last):
+  File "X:\reefscan\train.py", line 287, in main
+    train_classifier(args.task, model_name, cfg, device, strategy_override=args.strategy)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\train.py", line 179, in train_classifier
+    history = trainer.fit()
+  File "X:\reefscan\src\classification\engine.py", line 204, in fit
+    train_loss, train_acc, grad_norm = self._train_epoch()
+                                       ~~~~~~~~~~~~~~~~~^^
+  File "X:\reefscan\src\classification\engine.py", line 257, in _train_epoch
+    loss = self.criterion(outputs, targets)
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\reefscan\src\classification\losses.py", line 37, in forward
+    dist = (self.positions.expand(logits.size(0), -1) - targets.view(-1, 1).float()).abs()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+2026-11-18 20:46:06,225 | INFO    | train | === Training coral / mobilenet_v3 (feature_extraction) ===
+2026-11-18 20:46:06,226 | INFO    | src.classification.datasets | Dataset: 2 classes from datasets\coral\imagefolders
+2026-11-18 20:46:06,320 | INFO    | train | Classes (2): ['CORAL', 'CORAL_BL']
+2026-11-18 20:46:06,321 | INFO    | train | Class balancing: sampler=on, loss weights=inverse_sqrt
+Downloading: "https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth" to C:\Users\kapit/.cache\torch\hub\checkpoints\mobilenet_v3_small-047dcff4.pth
+  0%|          | 0.00/9.83M [00:00<?, ?B/s] 10%|█         | 1.00M/9.83M [00:00<00:00, 10.1MB/s] 37%|███▋      | 3.62M/9.83M [00:00<00:00, 19.3MB/s] 66%|██████▌   | 6.50M/9.83M [00:00<00:00, 23.5MB/s] 94%|█████████▍| 9.25M/9.83M [00:00<00:00, 25.2MB/s]100%|██████████| 9.83M/9.83M [00:00<00:00, 22.4MB/s]
+2026-11-18 20:46:07,150 | INFO    | src.classification.models | Built mobilenet_v3 (classes=2, trainable=1.05M / 1.52M params)
+2026-11-18 20:46:07,166 | INFO    | src.classification.engine | Strategy=feature_extraction | trainable 1.05M / 1.52M params
+train mobilenet_v3:   0%|          | 0/456 [00:00<?, ?it/s]                                                           2026-11-18 20:46:39,821 | ERROR   | train | Backbone mobilenet_v3 failed — continuing.
+Traceback (most recent call last):
+  File "X:\reefscan\train.py", line 287, in main
+    train_classifier(args.task, model_name, cfg, device, strategy_override=args.strategy)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\train.py", line 179, in train_classifier
+    history = trainer.fit()
+  File "X:\reefscan\src\classification\engine.py", line 204, in fit
+    train_loss, train_acc, grad_norm = self._train_epoch()
+                                       ~~~~~~~~~~~~~~~~~^^
+  File "X:\reefscan\src\classification\engine.py", line 257, in _train_epoch
+    loss = self.criterion(outputs, targets)
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\reefscan\src\classification\losses.py", line 37, in forward
+    dist = (self.positions.expand(logits.size(0), -1) - targets.view(-1, 1).float()).abs()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+2026-11-18 20:46:41,001 | INFO    | train | === Training coral / convnext_tiny (feature_extraction) ===
+2026-11-18 20:46:41,003 | INFO    | src.classification.datasets | Dataset: 2 classes from datasets\coral\imagefolders
+2026-11-18 20:46:41,077 | INFO    | train | Classes (2): ['CORAL', 'CORAL_BL']
+2026-11-18 20:46:41,078 | INFO    | train | Class balancing: sampler=on, loss weights=inverse_sqrt
+Downloading: "https://download.pytorch.org/models/convnext_tiny-983f1562.pth" to C:\Users\kapit/.cache\torch\hub\checkpoints\convnext_tiny-983f1562.pth
+  0%|          | 0.00/109M [00:00<?, ?B/s]  0%|          | 512k/109M [00:00<00:22, 5.12MB/s]  2%|▏         | 2.50M/109M [00:00<00:08, 13.7MB/s]  5%|▍         | 5.12M/109M [00:00<00:05, 19.8MB/s]  7%|▋         | 8.00M/109M [00:00<00:04, 23.7MB/s] 10%|▉         | 10.9M/109M [00:00<00:04, 25.6MB/s] 12%|█▏        | 13.6M/109M [00:00<00:04, 24.9MB/s] 16%|█▌        | 17.4M/109M [00:00<00:04, 23.5MB/s] 18%|█▊        | 20.1M/109M [00:00<00:03, 24.1MB/s] 21%|██        | 22.6M/109M [00:01<00:04, 22.2MB/s] 23%|██▎       | 25.0M/109M [00:01<00:03, 22.8MB/s] 25%|██▍       | 27.2M/109M [00:01<00:04, 21.0MB/s] 27%|██▋       | 29.4M/109M [00:01<00:04, 20.8MB/s] 29%|██▉       | 31.5M/109M [00:01<00:04, 19.1MB/s] 31%|███       | 33.4M/109M [00:01<00:04, 19.0MB/s] 32%|███▏      | 35.2M/109M [00:01<00:04, 18.3MB/s] 34%|███▍      | 37.1M/109M [00:01<00:04, 18.0MB/s] 36%|███▌      | 39.1M/109M [00:02<00:03, 18.6MB/s] 38%|███▊      | 41.0M/109M [00:02<00:04, 17.8MB/s] 39%|███▉      | 42.8M/109M [00:02<00:04, 17.3MB/s] 41%|████      | 44.5M/109M [00:02<00:04, 16.8MB/s] 42%|████▏     | 46.2M/109M [00:02<00:04, 16.1MB/s] 44%|████▍     | 47.9M/109M [00:02<00:04, 15.1MB/s] 46%|████▌     | 49.9M/109M [00:02<00:03, 16.5MB/s] 47%|████▋     | 51.5M/109M [00:02<00:03, 16.3MB/s] 49%|████▊     | 53.1M/109M [00:02<00:03, 16.1MB/s] 50%|█████     | 54.8M/109M [00:03<00:03, 15.0MB/s] 52%|█████▏    | 56.4M/109M [00:03<00:03, 15.2MB/s] 53%|█████▎    | 57.9M/109M [00:03<00:03, 14.7MB/s] 54%|█████▍    | 59.4M/109M [00:03<00:03, 14.8MB/s] 56%|█████▌    | 60.9M/109M [00:03<00:03, 13.5MB/s] 57%|█████▋    | 62.5M/109M [00:03<00:03, 14.3MB/s] 59%|█████▊    | 64.0M/109M [00:03<00:03, 13.9MB/s] 60%|█████▉    | 65.4M/109M [00:03<00:03, 13.6MB/s] 61%|██████▏   | 66.9M/109M [00:03<00:03, 13.6MB/s] 63%|██████▎   | 68.2M/109M [00:04<00:03, 13.8MB/s] 64%|██████▍   | 69.6M/109M [00:04<00:03, 13.2MB/s] 65%|██████▌   | 71.1M/109M [00:04<00:02, 13.9MB/s] 67%|██████▋   | 72.6M/109M [00:04<00:02, 14.0MB/s] 68%|██████▊   | 74.0M/109M [00:04<00:02, 13.5MB/s] 69%|██████▉   | 75.4M/109M [00:04<00:02, 12.6MB/s] 71%|███████   | 77.1M/109M [00:04<00:02, 14.1MB/s] 72%|███████▏  | 78.6M/109M [00:04<00:02, 14.2MB/s] 73%|███████▎  | 80.0M/109M [00:04<00:02, 13.9MB/s] 75%|███████▍  | 81.4M/109M [00:05<00:02, 13.5MB/s] 76%|███████▌  | 82.8M/109M [00:05<00:02, 13.5MB/s] 77%|███████▋  | 84.5M/109M [00:05<00:01, 14.8MB/s] 79%|███████▉  | 86.0M/109M [00:05<00:01, 14.7MB/s] 80%|████████  | 87.5M/109M [00:05<00:01, 14.5MB/s] 82%|████████▏ | 89.0M/109M [00:05<00:01, 14.3MB/s] 83%|████████▎ | 90.4M/109M [00:05<00:01, 12.6MB/s] 85%|████████▍ | 92.2M/109M [00:05<00:01, 14.4MB/s] 86%|████████▌ | 93.8M/109M [00:06<00:01, 14.4MB/s] 87%|████████▋ | 95.2M/109M [00:06<00:01, 14.3MB/s] 89%|████████▊ | 96.8M/109M [00:06<00:00, 14.1MB/s] 90%|████████▉ | 98.1M/109M [00:06<00:00, 13.9MB/s] 91%|█████████ | 99.5M/109M [00:06<00:00, 13.8MB/s] 92%|█████████▏| 101M/109M [00:06<00:00, 13.5MB/s]  94%|█████████▎| 102M/109M [00:06<00:00, 13.7MB/s] 95%|█████████▍| 104M/109M [00:06<00:00, 13.1MB/s] 96%|█████████▌| 105M/109M [00:06<00:00, 12.8MB/s] 97%|█████████▋| 106M/109M [00:07<00:00, 12.8MB/s] 99%|█████████▊| 108M/109M [00:07<00:00, 13.1MB/s]100%|█████████▉| 109M/109M [00:07<00:00, 13.0MB/s]100%|██████████| 109M/109M [00:07<00:00, 15.8MB/s]
+2026-11-18 20:46:48,915 | INFO    | src.classification.models | Built convnext_tiny (classes=2, trainable=0.00M / 27.82M params)
+2026-11-18 20:46:49,032 | INFO    | src.classification.engine | Strategy=feature_extraction | trainable 0.00M / 27.82M params
+train convnext_tiny:   0%|          | 0/456 [00:00<?, ?it/s]                                                            2026-11-18 20:47:25,194 | ERROR   | train | Backbone convnext_tiny failed — continuing.
+Traceback (most recent call last):
+  File "X:\reefscan\train.py", line 287, in main
+    train_classifier(args.task, model_name, cfg, device, strategy_override=args.strategy)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\train.py", line 179, in train_classifier
+    history = trainer.fit()
+  File "X:\reefscan\src\classification\engine.py", line 204, in fit
+    train_loss, train_acc, grad_norm = self._train_epoch()
+                                       ~~~~~~~~~~~~~~~~~^^
+  File "X:\reefscan\src\classification\engine.py", line 257, in _train_epoch
+    loss = self.criterion(outputs, targets)
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "X:\reefscan\.venv\Lib\site-packages\torch\nn\modules\module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "X:\reefscan\src\classification\losses.py", line 37, in forward
+    dist = (self.positions.expand(logits.size(0), -1) - targets.view(-1, 1).float()).abs()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+Traceback (most recent call last):
+  File "X:\reefscan\train.py", line 307, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "X:\reefscan\train.py", line 298, in main
+    raise RuntimeError("All backbones failed:\n" + "\n".join(failures))
+RuntimeError: All backbones failed:
+resnet34: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+efficientnet_b0: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+mobilenet_v3: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+convnext_tiny: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+E1 EXIT: 1

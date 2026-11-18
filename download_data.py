@@ -80,7 +80,7 @@ def main() -> int:
     apply_platform(cfg, args.platform)
     override_from_args(cfg, args)
 
-    if args.prepare_f4k or args.prepare_fishnet:
+    if args.prepare_f4k or getattr(args, "prepare_fishnet", False):
         prepare_f4k(cfg)
         return 0
 
