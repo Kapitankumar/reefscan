@@ -1,0 +1,23 @@
+{
+  "task": "coral",
+  "best_model": "resnet34",
+  "metric_for_best": "weighted_f1",
+  "leaderboard": [
+    {
+      "model": "resnet34",
+      "strategy": "feature_extraction",
+      "params_m": 21.29,
+      "params_trainable_m": 0.0,
+      "train_seconds": 190.2860984802246,
+      "accuracy": 0.8153354632587859,
+      "top5_accuracy": 1.0,
+      "macro_ap": 0.8706413252630347,
+      "precision_macro": 0.8036828344439106,
+      "recall_macro": 0.8030719172251812,
+      "macro_f1": 0.8033739249439946,
+      "weighted_f1": 0.8152424979350957,
+      "throughput_fps": 100.86469400889074,
+      "n_test": 1565
+    }
+  ]
+}

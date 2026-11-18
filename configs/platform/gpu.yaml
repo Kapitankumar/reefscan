@@ -10,7 +10,7 @@
 # For >=24 GB cards:
 #   --set coral.batch_size=128 --set fish.batch_size=128 --set seg.batch_size=32
 device:
-  num_workers: 8
+  num_workers: 2  # 16 GB system RAM: 8 workers blew past memory (OpenBLAS per-thread buffers)
 fish:
   batch_size: 16
 coral:

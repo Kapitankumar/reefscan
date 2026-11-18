@@ -2,7 +2,7 @@
   "model_name": "efficientnet_b0",
   "epoch": 4,
   "metric_for_best": "weighted_f1",
-  "value": 0.8665212912662624,
+  "value": 0.8633279936712756,
   "class_names": [
     "CORAL",
     "CORAL_BL"
